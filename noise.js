@@ -24,6 +24,9 @@ $(document).ready(function() {
   });
 
   $('body').keydown(function(event) {
+    // matches letter of pressed key
+    // to letter passed into playNote
+    // to find which ID to use
     let note = event.key;
     playNote(note);
   });
