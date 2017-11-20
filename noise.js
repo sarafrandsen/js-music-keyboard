@@ -22,4 +22,16 @@ $(document).ready(function() {
     playNote($(this).html());
     // empty .html() *returns* content
   });
+
+  $('body').keydown(function(event) {
+    let note = event.key;
+    playNote(note);
+  });
 });
+
+// lecture example
+//  $('body').keydown(function(event){
+//   if (event.key === 'a') {
+//     alert("hey you got an a!");
+//   }
+// });
