@@ -1,12 +1,25 @@
 
 let playNote = function playNote(note) {
+  // get the <audio> id by concatenating the note (a, b, c, etc) and 'Audio')
+  // i.e. #cAudio, #dAudio, #eAudio
   let noteID = note + 'Audio';
+  // play the sound file that
+  // matches the created ID
   let audio = document.getElementById(noteID);
   audio.play();
-  // get the <audio> id by concatenating the note (a, b, c, etc) and 'Audio')
 }
 
-$(document).ready( function() {
-  const notes = ['c', 'd', 'e', 'f', 'g', 'a', 'b'];
-//???
+$(document).ready(function() {
+  // ???
+  // instrument is class of div holding btns
+  // click is action
+  // button is target
+  $('.instrument').on('click', 'button', function(event) {
+    // playNote creates the noteID
+    // using the 'note' passed in
+    // (passed in when clicked)
+    // and plays matching note
+    playNote($(this).html());
+    // empty .html() *returns* content
+  });
 });
